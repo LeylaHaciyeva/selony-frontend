@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="selling.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container mr-auto ml-auto">
+                <div class="row">
+                    <div class="col-4 social-col">
+                        <ul class="social">
+                            <li><a href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-invision"></i></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-8 contact-col">
+                        <ul class="contact">
+                            <li>
+                                <a href="">
+                                    <span>
+                                        <i class="fas fa-phone-alt"></i>
+                                    </span>
+                                    <span class="contact-number">(+112) 345 45 45 45</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span class="contact-mail">leila23@gmail.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-bottom">
+            <div class="container ml-auto mr-auto">
+                <div class="row d-flex justify-content-end align-items-center">
+                    <div class="col-6 d-flex justify-content-start align-items-center">
+                        <h1 class="d-flex justify-content-center align-items-center">
+                            <a class="logo" href="./home.html">
+                                <img style="width:50px;margin-right:10px;margin-top:-10px"
+                                    src="./images/imageslogo-removebg-preview.png" alt="">
+                                Selony
+                            </a>
+                        </h1>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <ul class="menu d-none d-lg-block">
+                            <li><a class="active" href="./home.html">Home</a></li>
+                            <li><a href="./product.html">Products</a></li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="dropdown">
+                                <div style="margin-top:-5px;" class="btn dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Account
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item dropdown-item_login" href="./signin.html">Log in</a>
+                                    <a class="dropdown-item dropdown-item_logout" href="">Log out</a>
+                                    <a class="dropdown-item dropdown-item_signup" href="./signup.html">Sign up</a>
+                                    <a class="dropdown-item dropdown-item_admin" href="./admin.html">Admin</a>
+                                </div>
+                            </li>
+
+                            <li class="fav_item"><a href="./wishlist.html">
+                                    <i class=" fas fa-regular fa-heart"></i>
+                                    <span class="wishlist_count">
+
+                                    </span>
+                                </a></li>
+                            <li class="cart_item"><a href="basket.html">
+                                    <i class="fas fa-solid fa-shopping-cart"></i>
+                                    <span class="cart_count">
+
+                                    </span>
+                                </a></li>
+                        </ul>
+                        <button class="menu-button"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ul class="navigation">
+            <li class="close-icon"><span><i class="fas fa-times fa-2x"></i></span></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li class="dropdown-item_login_mob"><a href="./signin.html">Log in</a></li>
+            <li class="dropdown-item_signup_mob"><a href="./signup.html">Sign up</a></li>
+            <li class="dropdown-item_logout_mob"><a href="">Log out</a></li>
+            <li class="fav_item_mob"><a href="./wishlist.html">Favourite</a></li>
+            <li class="cart_item_mob"><a href="./basket.html">Basket</a></li>
+            <li class="dropdown-item_admin_mob"><a href="./admin.html"></a>Admin</li>
+        </ul>
+    </header>
+    <section>
+        <div class="container-fluid selling-image sell">
+            <div class="row">
+                <div class="col-9">
+                    <div class="selling-text">
+                        <h1>Shop With Us</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo
+                            cupiditate facere deleniti fuga officia.</p>
+                        <div class="selling-buttons">
+                            <a href="./product.html" class="shop-button">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container text-center">
+            <div class="row ">
+                <div class="col-12 ml-auto mr-auto">
+                    <div class="products-text">
+                        <span>Popular Products</span>
+                        <h1>Our Products</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi
+                            fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="row card-row">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section4">
+        <div class="container-fluid subscribe-img subs d-flex align-items-center justify-content-center">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="subscribe-h4 text-center">Get notified on each updates.</h4>
+                    <form class="subscribe-form text-center" action="">
+                        <input class="subscribe-input" type="text" name="" id=""
+                            placeholder="Enter your email address ">
+                        <input class="subscribe-button" type="button" value="Subscribe">
+                    </form>
+                    <p class="subscribe-p text-center">Lorem Lorem ipsum dolor sit amet. ipsum dolor sit amet
+                        consectetur adipisicing elit.<br> Modi, officiis! Lorem ipsum dolor sit amet.</p>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="section5 pb-5">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="section5-p">Awesome Products</p>
+                    <h1 class="section5-h">Featured Products</h1>
+                    <span class="section5-span"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container" style="background-color: white;">
+                    <div class="row section5-row2">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img class="w-100" src="././images/card1.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="about-product">
+                                <h1 class="about-h1">01.</h1>
+                                <h4 class="about-h4">About This Product</h4>
+                                <p class="about-p">Et tempora id nostrum saepe amet doloribus deserunt totam officiis
+                                    cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem
+                                    ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!
+                                </p>
+                                <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+                                    soluta assumenda sed optio, error at?</p>
+                                <span class="about-span">Price:</span>
+                                <ul>
+                                    <li>$269.00</li>
+                                    <li>$69.00</li>
+                                </ul>
+                                <form action="">
+                                    <input class="view-details" type="button" value="View Details">
+                                    <input class="addto-card" type="button" value="Add to Card">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row section5-row2">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="about-product">
+                                <h1 class="about-h1">02.</h1>
+                                <h4 class="about-h4">About This Product</h4>
+                                <p class="about-p">Et tempora id nostrum saepe amet doloribus deserunt totam officiis
+                                    cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem
+                                    ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!
+                                </p>
+                                <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+                                    soluta assumenda sed optio, error at?</p>
+                                <span class="about-span">Price:</span>
+                                <ul>
+                                    <li>$269.00</li>
+                                    <li>$69.00</li>
+                                </ul>
+                                <form action="">
+                                    <input class="view-details" type="button" value="View Details">
+                                    <input class="addto-card" type="button" value="Add to Card">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img class="w-100" src="././images/card6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div style="position: relative;">
+                        <img class="w-100" src="././images/merchant.jpg" alt="">
+                        <div class="merchant-text">
+                            <h2>Trusted Merchant</h2>
+                            <p>For 50 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="about-merchant">
+                        <span>Merchant Company</span>
+                        <h4>About Us</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat
+                            blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi except
+                            uri ipsam libero ratione adipisci alias eius vero vel!</p>
+                        <input type="button" value="Learn more">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <span class="team">TEAM</span>
+                    <!-- <h1 class="leader">Leadership</h1> -->
+                </div>
+            </div>
+            <div class="row pt-5 text-center">
+                <div class="col-lg-4 col-md-4 pb-5 ">
+                    <div class="cperson-text">
+                        <div class="personimg-div">
+                            <img class="w-100" src="./images/cperson1.jpg" alt="">
+                        </div>
+                        <h3>John Rooster</h3>
+                        <span>Co-Founder, President</span>
+                        <p>Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos
+                            est
+                            praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.
+                        </p>
+                    </div>
+                    <ul class="social">
+                        <li><a id="s" href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-invision"></i></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4 pb-5 ">
+                    <div class="cperson-text">
+                        <div class="personimg-div">
+                            <img class="w-100" src="./images/cperson2.jpg" alt="">
+                        </div>
+                        <h3>Tom Sharp</h3>
+                        <span>Co-Founder, Coo</span>
+                        <p>Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos
+                            est
+                            praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.
+                        </p>
+                    </div>
+                    <ul class="social">
+                        <li><a id="s" href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-invision"></i></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4 pb-5 ">
+                    <div class="cperson-text">
+                        <div class="personimg-div">
+                            <img class="w-100" src="./images/cperson3.jpg" alt="">
+                        </div>
+                        <h3>Winston Hodson</h3>
+                        <span>Marketing</span>
+                        <p>Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos
+                            est
+                            praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.
+                        </p>
+                    </div>
+                    <ul class="social">
+                        <li><a id="s" href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                        <li><a id="s" href=""><span><i class="fab fa-invision"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="container-fluid sale-img sale">
+            <div class="row text-center">
+                <div class="col-12">
+                    <div class="sale-text">
+                        <span>Special Promo</span>
+                        <h2>Summer Sale</h2>
+                        <p>Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut
+                            <br>eveniet aut consequatur laboriosam ipsam.
+                        </p>
+                    </div>
+                    <div class="time">
+                        <div class="week">
+                        </div>
+                        <div class="day">
+                        </div>
+                        <div class="hour">
+                        </div>
+                        <div class="minute">
+                        </div>
+                        <div class="second">
+                        </div>
+                    </div>
+                    <input type="button" class="shopButton" value="Shop Now">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section style="background-color: #f8f9fa; padding-bottom:50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="ourservice">Our Services</p>
+                    <h1 class="service-h1">We Offer Services</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div>
+                        <i class="fas fa-chart-pie pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">Business Consulting</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div><i class="fas fa-backspace pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">Market Analysis</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div>
+                        <i class="fas fa-clock pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">User Monitoring</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div>
+                        <i class="fas fa-check-square pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">Seller Consulting</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div>
+                        <i class="fas fa-business-time pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">Financial Investment</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-cols">
+                    <div>
+                        <i class="fas fa-cloud-download-alt pie-icon"></i>
+                    </div>
+                    <div>
+                        <h3 class="service-h3">Financial Management</h3>
+                        <p class="service-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis
+                            molestiae vitae eligendi at.</p>
+                        <a class="service-a" href="">Learn More..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="section12">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 blog">
+                    <p>BLOG</p>
+                    <h1>Blog Posts</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4  blog-col">
+                    <img class="w-100" src="./images/card1.jpg" alt="">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                    <div class="blog-text">
+                        Ham Brook
+                        <span>.</span>
+                        Jan 18, 2019
+                        <span>.</span>
+                        <a href="">NEWS</a>
+
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores
+                            sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                        <a href="">Continue Reading...</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  blog-col">
+                    <img class="w-100" src="./images/card6.jpg" alt="">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                    <div class="blog-text">
+                        Ham Brook
+                        <span>.</span>
+                        Jan 18, 2019
+                        <span>.</span>
+                        <a href="">NEWS</a>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores
+                            sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                        <a href="">Continue Reading...</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 blog-col">
+                    <img class="w-100" src="./images/card5.jpg" alt="">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+                    <div class="blog-text">
+                        Ham Brook
+                        <span>.</span>
+                        Jan 18, 2019
+                        <span>.</span>
+                        <a href="">NEWS</a>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores
+                            sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+                        <a href="">Continue Reading...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="section13 pb-5 pt-5">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center pt-5 pb-5 contact-top">
+                    <p>Contact Form</p>
+                    <h1 style="display:none" class="my-alert">gonderildi</h1>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center ">
+                <div class="col-md-7 ">
+                    <form class="contact-form" style="background-color: white;" action="">
+                        <h1>Contact Form</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">First Name</label><br>
+                                <input type="text" required name="userName" id="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Last Name</label><br>
+                                <input type="text" required name="userLastName" id="">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Email</label><br>
+                                <input type="text" required name="userEmail" id="">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Subject</label><br>
+                                <input type="text" required name="userSubject">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Message</label><br>
+                                <textarea required name="userMessage" id="" cols="5" rows="5"
+                                    placeholder="Write your notes or questions here..."></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button id="send-button" >Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section14">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <h3 class="section14-h3">About Us</h3>
+                    <p class="section14-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere
+                        laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                </div>
+                <div class="col-lg-3  col-md-3">
+                    <h3 class="section14-h3">Quick Links</h3>
+                    <ul class="bottom-ul">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3">
+                    <h3 class="section14-h3">Follow Us</h3>
+                    <ul class="bottom-social">
+                        <li><a href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                        <li><a href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                        <li><a href=""><span><i class="fab fa-invision"></i></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3">
+                    <h3 class="section14-h3">Featured Product</h3>
+                    <img class="w-100" src="./images/card6.jpg" alt="">
+                    <p class="shoe-p">Leather Brown Shoe</p>
+                    <span class="shoe-price">$60.00</span><br>
+                    <button class="shoe-button">Add To Card</button>
+                </div>
+            </div>
+            <div class="row text-center pb-5 pt-5">
+                <div class="col-lg-12">
+                    <p class="copy">Copyright ©2023 <i class="fas fa-heart"></i> by Leila</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./header.js"></script>
+    <script src="./contact.js"></script>
+    <script src="product.js"></script>
+    <script src="selling.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

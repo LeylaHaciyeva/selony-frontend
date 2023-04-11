@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+
+                <a class="navbar-brand" href="./admin.html">
+                    Admin Panel
+                </a>
+                <div class="admin-header-menu">
+                    <a href="./product.html">All products</a>
+                    <a href="./allCategory.html">All categories</a>
+                    <a href="./home.html">Go Home -></a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="exTab1" class="container">
+        <ul class="nav nav-pills d-flex justify-content-center mt-5">
+            <li class="active">
+                <a href="#1a" data-toggle="tab" class="nav_link">Add Product</a>
+            </li>
+            <li><a href="#2a" data-toggle="tab" class="nav_link">Add Category</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+                <h1 class="text-center"></h1>
+                <section>
+                    <div class="container d-flex justify-content-center">
+                        <form class="productForm mb-5" method="POST">
+                            <div class="form-group">
+                                <label for="productName" class=" col-form-label">Product name</label>
+                                <div class="">
+                                    <input type="text" class="" required id="productName" name="productName">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="productPrice" class="col-form-label">Product price</label>
+                                <div class="">
+                                    <input type="text" required name="productPrice" id="productPrice">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="productImage" class="col-form-label">Product image url</label>
+                                <div class="">
+                                    <input type="text" required name="productImage" id="productImage">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="productDesc" class=" col-form-label">Product desc</label>
+                                <div class="">
+                                    <textarea required cols="33" rows="5" name="productDesc"
+                                        id="productDesc"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory" class="col-form-label">Product category</label>
+                                <select name="categorySelected" id="categorySelected">
+                                </select>
+                            </div>
+
+                            <button>Add product</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane" id="2a">
+                <h1 class="text-center"></h1>
+                <section>
+                    <div class="container d-flex justify-content-center">
+                        <form class="categoryForm mb-5">
+                            <div class="form-group">
+                                <label for="categoryName" class=" col-form-label">Category name</label>
+                                <div class="">
+                                    <input required name="name" type="text" class="" id="categoryName">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="categoryDesc" class=" col-form-label">Category desc</label>
+                                <div class="">
+                                    <textarea required cols="33" rows="5" name="desc" id="categoryDesc"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="categoryimgUrl" class=" col-form-label">Category image</label>
+                                <div class="">
+                                    <input required name="url" type="text" id="categoryimgUrl">
+                                </div>
+                            </div>
+                            <button>Add Category</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        let categorySelected = document.querySelector("#categorySelected")
+        let optionCat
+        let fetchAllCategories = () => {
+            fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/category/all")
+                .then((data) => data.json())
+                .then((categories) => {
+                    categories.map((category) => {
+                        optionCat = document.createElement("option")
+                        optionCat.value = category.id
+                        optionCat.innerText = category.categoryName
+                        categorySelected.append(optionCat)
+                    })
+                })
+        }
+        fetchAllCategories()
+
+        let productForm = document.querySelector(".productForm")
+        productForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let productName = e.target.productName.value
+            let productImage = e.target.productImage.value
+            let productDesc = e.target.productDesc.value
+            let productPrice = e.target.productPrice.value
+            let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/api/createProduct", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    productName: productName,
+                    productDesc: productDesc,
+                    productImage: productImage,
+                    productPrice: productPrice,
+                    categoryId: 1
+                }),
+            })
+            if (data.status == 201) {
+                Swal.fire({
+                    title: '<strong>Product created</strong>',
+                    icon: 'info',
+                })
+            }
+            else{
+                Swal.fire({
+                    title: '<strong>Product not created</strong>',
+                    icon: 'info',
+                })
+            }
+        })
+
+
+        let categoryForm = document.querySelector(".categoryForm")
+        categoryForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            let name = e.target.name.value
+            let desc = e.target.desc.value
+            let url = e.target.url.value
+            let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/category/create", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    categoryName: name,
+                    description: desc,
+                    imageUrl: url
+
+                }),
+            })
+            if (data.status == 200) {
+                Swal.fire({
+                    title: '<strong>Category created</strong>',
+                    icon: 'info',
+                })
+            }
+            else{
+                Swal.fire({
+                    title: '<strong>Category not created</strong>',
+                    icon: 'info',
+                })
+            }
+        })
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
